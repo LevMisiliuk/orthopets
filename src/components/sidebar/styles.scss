@@ -1,0 +1,21 @@
+.sidebar {
+	position: fixed;
+	left: 0;
+	height: 100%;
+	background-color: #fff;
+    flex: 0.5;
+    border-right: 1px solid #E5E5E5;
+
+    width: 190px;
+    margin-top: 88px;
+
+    &__link {
+        color: #000;
+        text-decoration: none;
+    }
+
+	@media only screen and (max-width: 600px) {
+		display: none;
+	}
+}
+

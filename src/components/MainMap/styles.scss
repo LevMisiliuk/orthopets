@@ -1,0 +1,105 @@
+.main-map {
+	display: flex;
+	width: 100%;
+}
+.info-window {
+	&__container {
+		display: flex;
+		padding: 0px;
+
+		@media only screen and (max-width: 600px) {
+			padding-bottom: 10px;
+		}
+	}
+
+	&__doctor-data {
+		display: flex;
+		flex-direction: column;
+
+		padding-left: 8px;
+	}
+
+	&__doctor-image {
+		max-width: 100%;
+		height: 148px;
+		object-fit: cover;
+
+		@media only screen and (max-width: 600px) {
+			width: 80px;
+			height: 124px;
+		}
+	}
+
+	&__doctor-data-name {
+		font-size: 16px;
+		margin-bottom: 8px;
+		color: #000;
+		font-weight: bold;
+
+		@media only screen and (max-width: 600px) {
+			font-size: 14px;
+			margin-bottom: 4px;
+		}
+	}
+	&__doctor-data-experience {
+		font-size: 14px;
+		margin-bottom: 8px;
+		color: #000;
+		font-weight: 400;
+
+		@media only screen and (max-width: 600px) {
+			font-size: 12px;
+			margin-bottom: 4px;
+		}
+	}
+	&__doctor-data-clinic {
+		font-size: 14px;
+		margin-bottom: 8px;
+		color: #000;
+		font-weight: 400;
+
+		margin-bottom: 16px;
+
+		@media only screen and (max-width: 600px) {
+			font-size: 12px;
+			margin-bottom: 8px;
+		}
+	}
+
+	&__doctor-data-item {
+		font-size: 14px;
+		margin-bottom: 8px;
+		color: #000;
+		font-weight: 400;
+
+		&_orange {
+			font-weight: bold;
+			color: #DF3A06;
+			margin-top: 12px;
+			margin-bottom: 8px;
+
+			@media only screen and (max-width: 600px) {
+				font-size: 12px;
+				margin-bottom: 4px;
+				margin-top: 0px;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 16px;
+		}
+
+	}
+
+	&__doctor-socials-image {
+		margin-left: 8px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		@media only screen and (max-width: 600px) {
+			margin-left: 4px;
+		}
+	}
+}

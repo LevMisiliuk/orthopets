@@ -1,0 +1,24 @@
+.sidebar-option {
+	display: flex;
+	
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 24px 12px 24px;
+
+    img {
+        margin-right: 8px;
+    }
+
+    span {
+		white-space: nowrap;
+		font-size: 14px;
+		line-height: 22px;
+
+		color: #000000;
+    }
+
+	:hover {
+        opacity: 0.8;
+        background-color: var(--primary-gray);
+    }
+}

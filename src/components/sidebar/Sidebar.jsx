@@ -1,39 +1,21 @@
 import React from 'react'
-import styled from 'styled-components'
-// Components
-import SidebarOption from '../sidebarOption/SidebarOption';
-//libraries 
+import SidebarOption from '../SidebarOption/SidebarOption';
+import './styles.scss'
 import { Link } from 'react-router-dom';
-// Icons
-import homeIcon from '../../assets/home-icon.svg';
-import teamIcon from '../../assets/team-icon.svg';
+import homeIcon from '../../assets/images/home-icon.svg';
+import teamIcon from '../../assets/images/team-icon.svg';
 
 function Sidebar() {
     return (
-        <SidebarContainer>
-            <Link className="linkStyle" to="/">
-                <SidebarOption Icon={homeIcon} title="Карта" />
+        <aside className='sidebar'>
+            <Link className="sidebar__link" to="/">
+                <SidebarOption Icon={homeIcon} title="Мапа" />
             </Link>
-            <Link className="linkStyle" to="/network">
-                <SidebarOption Icon={teamIcon} title="Список ортопедов" />
+            <Link className="sidebar__link" to="/orthopets-list">
+                <SidebarOption Icon={teamIcon} title="Список ортопедів" />
             </Link>
-        </SidebarContainer>
+        </aside>
     )
 }
 
-export default Sidebar
-
-const SidebarContainer = styled.div`
-    background-color: #fff;
-    flex: 0.5;
-    border-right: 1px solid #E5E5E5;
-
-    min-width: 190px;
-    max-width: 190px;
-    margin-top: 88px;
-
-    .linkStyle {
-        color: #000;
-        text-decoration: none;
-    }
-`
+export default Sidebar;

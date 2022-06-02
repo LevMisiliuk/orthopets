@@ -1,80 +1,35 @@
-import React from 'react';
-import styled from "styled-components";
-import Logo from "../../assets/logo-orthopets.svg";
+import React, { useState } from 'react';
+import Logo from "../../assets/images/logo-orthopets.png";
+import { Link } from 'react-router-dom';
+import Menu from '../Menu/Menu';
+import './styles.scss'
 
 
 function Header() {
+    const [menuActive, setMenuActive] = useState(false)
+    const menuItems = [{value: "Головна", href: "/"}, {value: "Список ортопедів", href: "/orthopets-list"}]
     return (
-        <HeaderContainer>
-            <HeaderLeft>
-                <HeaderLogo
-                    src={Logo}
-                > 
-                </HeaderLogo>
-            </HeaderLeft>
-            <HeaderRight>
-                Ортопедическое-нейрохирургическое ветеринарное сообщество Украины "Ortopets"
-            </HeaderRight>
-        </HeaderContainer>
+        <header className='header'>
+            <Link to="/" className='header__left'>
+                <img
+					className='header__logo'
+					src={Logo}
+                    alt='Orthopets'
+                />
+            </Link>
+            <div className='header__right'>
+                <h3 className='header__title'>
+                    Ортопедичне-нейрохірургічне ветеринарне співтовариство України "Ortopets"
+				</h3>
+            </div>
+            <nav className="header__burger">
+                <div className="header__burger-btn" onClick={() => setMenuActive(!menuActive)}>
+                    <span />
+                </div>
+            </nav>
+            <Menu active={menuActive} setActive={setMenuActive} header={"Бургер меню"} items={menuItems}/>
+        </header>
     )
 }
 
 export default Header;
-
-const HeaderContainer = styled.div`
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: auto;
-    max-width: 100vw;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #E5E5E5;
-`
-
-const HeaderLeft = styled.div`
-    flex: 0.3;
-    display: flex;
-    align-items: center;
-    padding: 11.5px 24px;
-`
-
-const HeaderRight = styled.div`
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-    /* identical to box height, or 137% */
-
-    text-align: right;
-
-    color: #DF3A06;
-    padding: 20px 24px;
-`
-
-const HeaderLogo = styled.img`
-    cursor: pointer;
-
-    :hover {
-        opacity: 0.8;
-    }
-`
-const HeaderAvatar = styled.div`
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #000;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    >span {
-        color: #fff;
-        font-size: 26px;
-        text-align: center;
-        align-self: center;
-    }
-    :hover {
-        opacity: 0.8;
-    }
-`
