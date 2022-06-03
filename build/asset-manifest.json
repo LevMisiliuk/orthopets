@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9f605f38.css",
+    "main.js": "/static/js/main.6397f7cb.js",
+    "static/media/sergei-tkachenko.jpeg": "/static/media/sergei-tkachenko.5f6d9dbea4cd3cbdbcba.jpeg",
+    "static/media/valeriy-misiliuk.jpg": "/static/media/valeriy-misiliuk.ba2aa3e75eec3e01e86b.jpg",
+    "static/media/doctor.jpeg": "/static/media/doctor.1d8436cf838c8222a96e.jpeg",
+    "static/media/logo-orthopets.png": "/static/media/logo-orthopets.06a669157b9bca1e4935.png",
+    "static/media/team-icon.svg": "/static/media/team-icon.3715441c9b1eb3df8871dfec529a7fe8.svg",
+    "static/media/viber.svg": "/static/media/viber.fab6f87123d917d5cafdc54b7e5f5449.svg",
+    "static/media/instagram.svg": "/static/media/instagram.d15b143989c7dfd1fc96380fba948ccf.svg",
+    "static/media/home-icon.svg": "/static/media/home-icon.ba55b906edb31d1878da189d0c113256.svg",
+    "index.html": "/index.html",
+    "static/media/close-icon.svg": "/static/media/close-icon.697233989f5444da5cd8bde3e0296736.svg",
+    "main.9f605f38.css.map": "/static/css/main.9f605f38.css.map",
+    "main.6397f7cb.js.map": "/static/js/main.6397f7cb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f605f38.css",
+    "static/js/main.6397f7cb.js"
+  ]
+}
